@@ -1,0 +1,139 @@
+:root {
+    --main-color: #F47B2C;
+    --secondary-color: #D3D6D8;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+#form-content{
+    width: 90%;
+    max-width: 400px;
+    background-color:#FFFF ;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow:0 4px 10px;
+}
+
+#form-content > a {
+    display: inline-block;
+    margin:  0 10px 35px;
+}
+
+#form-content h2{
+    text-transform: uppercase;
+    padding: 5px 0 0;
+    font-weight: 600;
+    color: #D0D0D0;
+    transition: all 0.6s ease-in-out;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+}
+
+#form-content h2.active{
+    border-bottom: 2px solid var(--main-color);
+    color: #191919;
+}
+
+#form-content h2.inactive:hover{
+    color: #191919;
+    border-bottom: var(--secondary-color);
+}
+
+/*Hiệu ứng viền chân,... forgot password*/
+#form-content #form-footer a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    padding-bottom: 2px; 
+}
+
+#form-content #form-footer a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+#form-content #form-footer a:hover::after {
+    transform: translateX(0);
+}
+
+#form-content #form-footer a:hover {
+    color: #191919;
+}
+/**/
+
+/*Chỉnh sửa bố cục, kích thước, màu, hiệu ứng khung điền thông tin,...*/
+#form-content input[type="text"],
+#form-content input[type="password"] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 5px;
+    width: 88%; 
+    border-bottom: 2px solid transparent; 
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#form-content input[type="text"]:focus,
+#form-content input[type="password"]:focus {
+    background-color: #fff;
+    outline: none; 
+    border-bottom: 2px solid var(--main-color); 
+}
+
+#form-content input::placeholder {
+    color: #cccccc;
+}
+
+#form-content input[type="submit"] {
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin: 5px 20px 40px 20px;
+    width: 88%;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px 0 rgba(244, 123, 44, 0.4);
+}
+
+#form-content input[type="submit"]:hover {
+    background-color: #FF8F44;
+}
+/**/
+
+#avatar{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 25px;
+}
+
+
+

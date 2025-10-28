@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- TODO
+  1) Thêm hình ảnh vào webpage login.html và register.html
+  2) Thêm đường dẫn đến trang login.html
+  3) Viết css vào file style.css và dùng chung cho cả 2 webpage trên:
+    + Chiều rộng phần nội dung 90% nhưng giới hạn kích thước tối đa là 400px
+    + tiêu đề h2 của trang có kích thước x1 root và viết hoa
+    + Sử dụng font Poppins cho toàn bộ nội dung của trang 
+  https://fonts.google.com/specimen/Poppins
+    + Sử dụng 2 màu chính là:  #F47B2C  và #D3D6D8;
+    * nên khai báo biến màu cho toàn bộ trang như sau:
+      :root {
+          --main-color: #F47B2C;
+          --secondary-color: #D3D6D8;
+      }
+      và sử dụng: var(--main-color) hoặc var(--secondary-color) để dùng
+  -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Register Page</title>
+  </head>
+  <body>
+    <div class="wrapper fade-in-down">
+      <div id="form-content">
+        <!-- Tabs Titles -->
+        <a href="login.html">
+          <h2 class="inactive underline-hover">Sign In</h2>
+        </a>
+        <a href="register.html">
+          <h2 class="active">Sign Up</h2>
+        </a>
+
+        <!-- Icon -->
+        <div class="fade-in first">
+          <img src="imgs/avatar.png" id="avatar" alt="User Icon" />
+        </div>
+
+        <!-- Login Form -->
+        <form>
+          <input
+            type="text"
+            id="login"
+            class="fade-in second"
+            name="username"
+            placeholder="username"
+          />
+          <input
+            type="password"
+            id="password"
+            class="fade-in third"
+            name="password"
+            placeholder="password"
+          />
+          <input
+            type="password"
+            id="repeat-password"
+            class="fade-in fourth"
+            name="repeat-password"
+            placeholder="repeat password"
+          />
+          <input type="submit" class="fade-in five" value="Register" />
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="form-footer">
+          <a class="underline-hover" href="#">Forgot Password?</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
