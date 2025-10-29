@@ -23,6 +23,7 @@ body{
     text-align: center;
     border-radius: 10px;
     box-shadow:0 4px 10px;
+    margin-top: 50px;
 }
 
 #form-content > a {
@@ -30,60 +31,53 @@ body{
     margin:  0 10px 35px;
 }
 
+/* 1.Hiệu ứng chuyển đổi trang "sign in & up",...nhìn là Gay*/
 #form-content h2{
     text-transform: uppercase;
     padding: 5px 0 0;
     font-weight: 600;
-    color: #D0D0D0;
-    transition: all 0.6s ease-in-out;
-    border-bottom: 2px solid transparent;
+    color: #D0D0D0; 
+    transition: color 0.3s ease-in-out; 
+    border-bottom: 2px solid transparent; 
     display: inline-block;
-}
-
-#form-content h2.active{
-    border-bottom: 2px solid var(--main-color);
-    color: #191919;
-}
-
-#form-content h2.inactive:hover{
-    color: #191919;
-    border-bottom: var(--secondary-color);
-}
-
-/*Hiệu ứng viền chân,... forgot password*/
-#form-content #form-footer a {
-    color: var(--main-color);
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    position: relative;
+    position: relative; 
+    /*Che gạch chân*/
     overflow: hidden;
-    display: inline-block;
+    /**/ 
     padding-bottom: 2px; 
 }
 
-#form-content #form-footer a::after {
+#form-content h2::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--main-color);
+    background-color: var(--main-color); 
     transform: translateX(-100%);
-    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out; 
 }
-
-#form-content #form-footer a:hover::after {
-    transform: translateX(0);
-}
-
-#form-content #form-footer a:hover {
+/*hiện màu chữ*/
+#form-content h2.active{
     color: #191919;
+    border-bottom: 2px solid transparent;
+}
+/*gạch chân không ẩn*/
+#form-content h2.active::after {
+    transform: translateX(0); 
+}
+/*đổi màu chữ*/
+#form-content h2:hover{
+    color: #191919;
+}
+/* gạch chân kéo ra*/
+#form-content h2:hover::after {
+    transform: translateX(0);
 }
 /**/
 
-/*Chỉnh sửa bố cục, kích thước, màu, hiệu ứng khung điền thông tin,...*/
+/* 2.Chỉnh sửa bố cục, kích thước, màu, hiệu ứng "khung điền thông tin",...*/
 #form-content input[type="text"],
 #form-content input[type="password"] {
     background-color: #f6f6f6;
@@ -98,18 +92,16 @@ body{
     transition: all 0.5s ease-in-out;
     border-radius: 5px 5px 5px 5px;
 }
-
+/*gạch chân khung thông tin*/
 #form-content input[type="text"]:focus,
 #form-content input[type="password"]:focus {
     background-color: #fff;
     outline: none; 
     border-bottom: 2px solid var(--main-color); 
 }
+/**/
 
-#form-content input::placeholder {
-    color: #cccccc;
-}
-
+/* 3."REGISTER & LOGIN"*/
 #form-content input[type="submit"] {
     background-color: var(--main-color);
     border: none;
@@ -126,6 +118,41 @@ body{
 
 #form-content input[type="submit"]:hover {
     background-color: #FF8F44;
+}
+/**/
+
+/* 4.Hiệu ứng viền chân, chữ,... "forgot password"*/
+#form-content #form-footer a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    /*che gạch chân*/
+    overflow: hidden;
+    /**/
+    display: inline-block;
+    padding-bottom: 2px; 
+}
+
+#form-content #form-footer a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+/*Gạch chân*/
+#form-content #form-footer a:hover::after {
+    transform: translateX(0);
+}
+/*Đổi màu chữ*/
+#form-content #form-footer a:hover {
+    color: #191919;
 }
 /**/
 
